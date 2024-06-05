@@ -14,7 +14,9 @@ Deze functie splitst de getallen middels een komma zodat ze niet als decimaal ge
 In de derde kolom wordt de invoer uit kolom 1 gechecked op de gelijkwaardigheid met een boolean als output.
 En in de vierde kolom wordt gechecked of de booleans uit kolom twee en drie overeenkomen.
 '''
-
+print()
+print("Testtabel:")
+print()
 
 def eqcheck(tabel):
     for rij, data in tabel.items():
@@ -57,4 +59,9 @@ tabel = {
 eqcheck(tabel)
 
 for rij, info in tabel.items():
-    print(f"{rij}: {info}")
+   invoer = info['Invoer']
+   verwachte_uitvoer = info['Verwachte uitvoer']
+   uitvoer = info['Uitvoer']
+   commentaar = info['Commentaar']
+   
+   print(f"{rij}: Invoer : {invoer}, Verwachte uitvoer : {verwachte_uitvoer}, Uitvoer : {uitvoer}, Commentaar : {commentaar}")
